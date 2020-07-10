@@ -1,0 +1,351 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red0\green90\blue0;\red16\green158\blue98;\red0\green90\blue143;\red63\green90\blue90;\red116\green63\blue0;\red170\green64\blue64;\red9\green118\blue72;\red56\green136\blue159;\red12\green100\blue126;\red36\green36\blue36;\red170\green51\blue170;}
+\viewkind4\uc1\pard\cf1\highlight2\f0\fs20 
+\par \cf3\highlight0 In [\cf4 20\cf3 ]: \cf0 exit\cf1\highlight2 
+\par \cf0\highlight0 (base) c506-043[skx](240)$ ipython\cf1\highlight2 
+\par \cf0\highlight0 Python 3.7.6 (default, Jan  8 2020, 19:59:22)\cf1\highlight2 
+\par \cf0\highlight0 Type 'copyright', 'credits' or 'license' for more information\cf1\highlight2 
+\par \cf0\highlight0 IPython 7.12.0 -- An enhanced Interactive Python. Type '?' for help.\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 1\cf3 ]: from\cf0  \cf5 stampede_load_xyz_age_R_r\cf0  \cf3 import\cf0  *\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.simulation.Snapshot():\cf1\highlight2 
+\par \cf0\highlight0 * reading:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/snapshot_times.txt\cf1\highlight2 
+\par 
+\par \cf0\highlight0   using snapshot index = 696, redshift = 0.000\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 # in gizmo_analysis.gizmo_io.Read():\cf1\highlight2 
+\par \cf0\highlight0 * reading header from:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/output/snapdir_696/snapshot_696.0.hdf5\cf1\highlight2 
+\par \cf0\highlight0   snapshot contains the following number of particles:\cf1\highlight2 
+\par \cf0\highlight0     dark      (id = 1): 70514272 particles\cf1\highlight2 
+\par \cf0\highlight0     dark2     (id = 2): 5513331 particles\cf1\highlight2 
+\par \cf0\highlight0     gas       (id = 0): 55617748 particles\cf1\highlight2 
+\par \cf0\highlight0     star      (id = 4): 15375761 particles\cf1\highlight2 
+\par \cf0\highlight0     blackhole (id = 5): 0 particles\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * reading species: ['star']\cf1\highlight2 
+\par \cf0\highlight0 * reading particles from:\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.0.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.1.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.2.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.3.hdf5\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * reading cosmological parameters from:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/initial_condition/ic_agora_m12i.conf\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * checking sanity of particle properties\cf1\highlight2 
+\par \cf0\highlight0 ! warning: star id.child [min, max] = [0.000, 4.294e9]\cf1\highlight2 
+\par 
+\par \cf0\highlight0   cannot read file containing hosts coordinates\cf1\highlight2 
+\par \cf0\highlight0   instead will assign hosts via iterative zoom on particle mass\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_center_positions():\cf1\highlight2 
+\par \cf0\highlight0 * assigning position for 1 center/host, via iterative zoom-in on star particle mass\cf1\highlight2 
+\par \cf0\highlight0   host1 position = (41844.819, 44106.892, 46284.661) [kpc comoving]\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_center_velocities():\cf1\highlight2 
+\par \cf0\highlight0 * assigning velocity for 1 center/host, weighting star particles by mass\cf1\highlight2 
+\par \cf0\highlight0   host1 velocity = (-48.8, 80.2, 89.3) [km / s]\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_principal_axes():\cf1\highlight2 
+\par \cf0\highlight0 * assigning rotation tensor for 1 host\cf1\highlight2 
+\par \cf0\highlight0   using star particles at distance < 10.0 kpc\cf1\highlight2 
+\par \cf0\highlight0   using distance < 7.9 kpc that encloses 90% of mass\cf1\highlight2 
+\par \cf0\highlight0   using youngest 25% of star particles\cf1\highlight2 
+\par \cf0\highlight0   host1: using star particles with age = [0.000, 3.182] Gyr\cf1\highlight2 
+\par \cf0\highlight0   host1: axis ratios: min/maj = 0.177, min/med = 0.185, med/maj = 0.957\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Calculated the cylindrical radius R in xy plane\cf1\highlight2 
+\par \cf0\highlight0 Calculated the spherical radius r in the xyz plane\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 2\cf3 ]: \cf0 ind_R7to9=np.where((R>\cf3 7\cf0 ) & (R<\cf3 9\cf0 ))\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 3\cf3 ]: \cf0 x_R7to9=x[ind_R7to9] \cf6 #find the x components only of the slection\cf1\highlight2 
+\par \cf3\highlight0    ...: \cf0 y_R7to9=y[ind_R7to9] \cf6 #find the y components only of the slection\cf1\highlight2 
+\par \cf3\highlight0    ...: \cf0 z_R7to9=z[ind_R7to9]\cf1\highlight2 
+\par \cf3\highlight0    ...: \cf0 age_R7to9=np.log10(age[ind_R7to9])\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 4\cf3 ]: print\cf0 (x_R7to9)\cf1\highlight2 
+\par \cf0\highlight0 [-8.07320986 -8.11097325 -8.0584914  ...  2.4353691   2.44668154\cf1\highlight2 
+\par \cf0\highlight0   2.32945372]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 5\cf3 ]: \cf0 R_R7to9=R[ind_R7to9]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 6\cf3 ]: \cf0 ind_age_R7to9_young=np.where((age_R7to9>\cf3 7\cf0 )&(age_R7to9<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0    ...: \cf0 age_R7to9_young=age_R7to9[ind_age_R7to9_young]\cf1\highlight2 
+\par \cf3\highlight0    ...: print\cf0 (age_R7to9_young,\cf7 "The total no. of stars is"\cf0 ,\cf3 len\cf0 (age_R7to9_young))\cf1\highlight2 
+\par \cf0\highlight0 [7.02453198 7.05072729 7.38712498 ... 7.66298265 7.66026601 7.63930288] The total no. of stars is 8305\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 7\cf3 ]: \cf0 d_xyz=np.sqrt(x_R7to9**\cf3 2\cf0 +(y_R7to9-\cf3 8\cf0 )**\cf3 2\cf0 +z_R7to9**\cf3 2\cf0 )\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 8\cf3 ]: \cf0 ind_d_xyz_lessthan1=np.where(d_xyz<\cf3 1\cf0 )\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 9\cf3 ]: \cf0 d_xyz_lessthan1=d_xyz[ind_d_xyz_lessthan1]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 10\cf3 ]: \cf0 x_d_xyz_lessthan1=x_R7to9[ind_d_xyz_lessthan1]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_d_xyz_lessthan1=y_R7to9[ind_d_xyz_lessthan1]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_d_xyz_lessthan1=z_R7to9[ind_d_xyz_lessthan1]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 R_d_xyz_lessthan1=R_R7to9[ind_d_xyz_lessthan1]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_d_xyz_lessthan1=age_R7to9[ind_d_xyz_lessthan1] \cf6 #ages of star in the region R7to9 that are withtin d<1 in xyz plane\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 11\cf3 ]: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 12\cf3 ]: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 13\cf3 ]: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 14\cf3 ]: print\cf0 (\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf0\highlight0 249\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 15\cf3 ]: print\cf0 (age_d_xyz_lessthan1)\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_old_d_xyz=np.where((np.log10(age_d_xyz_lessthan1)>\cf3 9\cf0 )&(np.log10(age_d_xyz_lessthan1)<\cf3 9.5\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_young_d_xyz=x_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_young_d_xyz=y_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_young_d_xyz=z_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of young stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_old_d_xy=age_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_old_d_xyz=x_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_old_d_xyz=y_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_old_d_xyz=z_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of old stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_old_D_xy))\cf1\highlight2 
+\par \cf0\highlight0 [10.03119638  8.94880988  9.48315363 ...  9.20382023  8.37900235\cf1\highlight2 
+\par \cf0\highlight0   9.37135111]\cf1\highlight2 
+\par \cf0\highlight0 The total no. of young stars in the sperical radius <1 from a point (0,8,0) is 249\cf1\highlight2 
+\par \cf8\highlight0 ---------------------------------------------------------------------------\cf1\highlight2 
+\par \cf8\highlight0 NameError\cf0                                  Traceback (most recent call last)\cf1\highlight2 
+\par \cf9\highlight0 <ipython-input-15-290fd2336412>\cf0  in \cf10 <module>\cf1\highlight2 
+\par \cf4\highlight0      21\cf1\highlight2 
+\par \cf4\highlight0      22\cf1\highlight2 
+\par \cf9\highlight0 ---> 23\cf8  \cf0 print\cf11 ("The total no. of old stars in the sperical radius <1 from a point (0,8,0) is",\cf0 len\cf11 (\cf0 age_old_D_xy\cf11 ))\cf1\highlight2 
+\par 
+\par \cf8\highlight0 NameError\cf0 : name 'age_old_D_xy' is not defined\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 16\cf3 ]: print\cf0 (age_d_xyz_lessthan1)\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_old_d_xyz=np.where((np.log10(age_d_xyz_lessthan1)>\cf3 9\cf0 )&(np.log10(age_d_xyz_lessthan1)<\cf3 9.5\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_young_d_xyz=x_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_young_d_xyz=y_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_young_d_xyz=z_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of young stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_old_d_xy=age_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_old_d_xyz=x_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_old_d_xyz=y_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_old_d_xyz=z_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of old stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_old_d_xyz))\cf1\highlight2 
+\par \cf0\highlight0 [10.03119638  8.94880988  9.48315363 ...  9.20382023  8.37900235\cf1\highlight2 
+\par \cf0\highlight0   9.37135111]\cf1\highlight2 
+\par \cf0\highlight0 The total no. of young stars in the sperical radius <1 from a point (0,8,0) is 249\cf1\highlight2 
+\par \cf8\highlight0 ---------------------------------------------------------------------------\cf1\highlight2 
+\par \cf8\highlight0 NameError\cf0                                  Traceback (most recent call last)\cf1\highlight2 
+\par \cf9\highlight0 <ipython-input-16-dc7e96df8ca2>\cf0  in \cf10 <module>\cf1\highlight2 
+\par \cf4\highlight0      21\cf1\highlight2 
+\par \cf4\highlight0      22\cf1\highlight2 
+\par \cf9\highlight0 ---> 23\cf8  \cf0 print\cf11 ("The total no. of old stars in the sperical radius <1 from a point (0,8,0) is",\cf0 len\cf11 (\cf0 age_old_d_xyz\cf11 ))\cf1\highlight2 
+\par 
+\par \cf8\highlight0 NameError\cf0 : name 'age_old_d_xyz' is not defined\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 17\cf3 ]: print\cf0 (age_d_xyz_lessthan1)\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_old_d_xyz=np.where((np.log10(age_d_xyz_lessthan1)>\cf3 9\cf0 )&(np.log10(age_d_xyz_lessthan1)<\cf3 9.5\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_young_d_xyz=x_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_young_d_xyz=y_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_young_d_xyz=z_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of young stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_old_d_xy=age_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_old_d_xyz=x_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_old_d_xyz=y_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_old_d_xyz=z_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of old stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_old_d_xyz))\cf1\highlight2 
+\par \cf0\highlight0 [10.03119638  8.94880988  9.48315363 ...  9.20382023  8.37900235\cf1\highlight2 
+\par \cf0\highlight0   9.37135111]\cf1\highlight2 
+\par \cf0\highlight0 The total no. of young stars in the sperical radius <1 from a point (0,8,0) is 249\cf1\highlight2 
+\par \cf8\highlight0 ---------------------------------------------------------------------------\cf1\highlight2 
+\par \cf8\highlight0 NameError\cf0                                  Traceback (most recent call last)\cf1\highlight2 
+\par \cf9\highlight0 <ipython-input-17-dc7e96df8ca2>\cf0  in \cf10 <module>\cf1\highlight2 
+\par \cf4\highlight0      21\cf1\highlight2 
+\par \cf4\highlight0      22\cf1\highlight2 
+\par \cf9\highlight0 ---> 23\cf8  \cf0 print\cf11 ("The total no. of old stars in the sperical radius <1 from a point (0,8,0) is",\cf0 len\cf11 (\cf0 age_old_d_xyz\cf11 ))\cf1\highlight2 
+\par 
+\par \cf8\highlight0 NameError\cf0 : name 'age_old_d_xyz' is not defined\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 18\cf3 ]: print\cf0 (age_d_xyz_lessthan1)\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_old_d_xyz=np.where((np.log10(age_d_xyz_lessthan1)>\cf3 9\cf0 )&(np.log10(age_d_xyz_lessthan1)<\cf3 9.5\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_young_d_xyz=x_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_young_d_xyz=y_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_young_d_xyz=z_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of young stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_old_d_xyz=age_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_old_d_xyz=x_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_old_d_xyz=y_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_old_d_xyz=z_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of old stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_old_d_xyz))\cf1\highlight2 
+\par \cf0\highlight0 [10.03119638  8.94880988  9.48315363 ...  9.20382023  8.37900235\cf1\highlight2 
+\par \cf0\highlight0   9.37135111]\cf1\highlight2 
+\par \cf0\highlight0 The total no. of young stars in the sperical radius <1 from a point (0,8,0) is 249\cf1\highlight2 
+\par \cf0\highlight0 The total no. of old stars in the sperical radius <1 from a point (0,8,0) is 0\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 19\cf3 ]: print\cf0 (age_d_xyz_lessthan1)\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_young_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 7\cf0 )&(age_d_xyz_lessthan1<\cf3 8\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ind_age_old_d_xyz=np.where((age_d_xyz_lessthan1>\cf3 9\cf0 )&(age_d_xyz_lessthan1<\cf3 9.5\cf0 ))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_young_d_xyz=age_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_young_d_xyz=x_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_young_d_xyz=y_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_young_d_xyz=z_d_xyz_lessthan1[ind_age_young_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of young stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_young_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 age_old_d_xyz=age_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 x_old_d_xyz=x_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 y_old_d_xyz=y_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 z_old_d_xyz=z_d_xyz_lessthan1[ind_age_old_d_xyz]\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: print\cf0 (\cf7 "The total no. of old stars in the sperical radius <1 from a point (0,8,0) is"\cf0 ,\cf3 len\cf0 (age_old_d_xyz))\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf0\highlight0 [10.03119638  8.94880988  9.48315363 ...  9.20382023  8.37900235\cf1\highlight2 
+\par \cf0\highlight0   9.37135111]\cf1\highlight2 
+\par \cf0\highlight0 The total no. of young stars in the sperical radius <1 from a point (0,8,0) is 249\cf1\highlight2 
+\par \cf0\highlight0 The total no. of old stars in the sperical radius <1 from a point (0,8,0) is 4290\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 20\cf3 ]: \cf6 #3d plots of the position\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig3 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig3.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_d_xyz_lessthan1,y_d_xyz_lessthan1,z_d_xyz_lessthan1,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of stars in 3D for xyz distance selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig3.savefig(\cf7 "positionplots3d_spherical_cut_1.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig4 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig4.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_young_d_xyz,y_young_d_xyz,z_young_d_xyz,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of old stars in 3D for xyz distance selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig4.savefig(\cf7 "positionplots3d_spherical_cut_1_young.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig5 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig5.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_old_d_xyz,y_old_d_xyz,z_old_d_xyz,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of old stars in 3D for xyz distance selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig5.savefig(\cf7 "positionplots3d_spherical_cut_1_old.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 21\cf3 ]: \cf0 fig3 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig3.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_d_xyz_lessthan1,y_d_xyz_lessthan1,z_d_xyz_lessthan1,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of all stars in 3D for xyz distance  selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig3.savefig(\cf7 "positionplots3d_spherical_cut_1.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig4 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig4.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_young_d_xyz,y_young_d_xyz,z_young_d_xyz,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of young stars in 3D for xyz distance selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig4.savefig(\cf7 "positionplots3d_spherical_cut_1_young.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig5 = plt.figure()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1 = fig5.add_subplot(\cf3 111\cf0 , projection=\cf7 '3d'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.scatter(x_old_d_xyz,y_old_d_xyz,z_old_d_xyz,marker=\cf7 "."\cf0 ,s=\cf3 0.5\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_xlabel(\cf7 'x'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_ylabel(\cf7 'y'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlabel(\cf7 'z'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_zlim(-\cf3 2\cf0 ,\cf3 2\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.set_title(\cf7 'Position of old stars in 3D for xyz distance selection away from 0,8,0'\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 ax1.minorticks_on()\cf1\highlight2 
+\par \cf3\highlight0     ...: \cf0 fig5.savefig(\cf7 "positionplots3d_spherical_cut_1_old.png"\cf0 )\cf1\highlight2 
+\par \cf3\highlight0     ...:\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 22\cf3 ]: \cf0 Connection to c506-043 closed by remote host.\cf1\highlight2 
+\par \cf0\highlight0 Connection to c506-043 closed.\cf1\highlight2 
+\par \cf0\highlight0 Cleaning up: submitted job (yes) removing job 6018131.\cf1\highlight2 
+\par \cf0\highlight0 (base) login4.stampede2(235)$ exit\cf1\highlight2 
+\par \cf0\highlight0 logout\cf1\highlight2 
+\par 
+\par \cf12\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf8\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf13 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf13 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf13 S\cf0  to save terminal output to file\cf1\highlight2 
+\par \pard\cf0\highlight0\f1 
+\par }
+ 

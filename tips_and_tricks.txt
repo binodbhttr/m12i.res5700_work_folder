@@ -1,0 +1,16 @@
+##Very useful tips:
+
+1. To list active variables :
+	global() # to see all global variables
+	local() #to sell all local variables
+
+2. To run a python file and import all its variables 
+
+	from [filename without .py] import *
+
+3. To add a space between two side by side plots
+	plt.subplots_adjust(wspace=1)
+
+
+
+

@@ -1,0 +1,112 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red0\green90\blue0;\red16\green158\blue98;\red0\green90\blue143;\red170\green64\blue64;\red9\green118\blue72;\red56\green136\blue159;\red12\green100\blue126;\red36\green36\blue36;\red170\green51\blue170;}
+\viewkind4\uc1\pard\f0\fs20 (base) c506-001[skx](203)$ ipython\cf1\highlight2 
+\par \cf0\highlight0 Python 3.7.6 (default, Jan  8 2020, 19:59:22)\cf1\highlight2 
+\par \cf0\highlight0 Type 'copyright', 'credits' or 'license' for more information\cf1\highlight2 
+\par \cf0\highlight0 IPython 7.12.0 -- An enhanced Interactive Python. Type '?' for help.\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 1\cf3 ]: import\cf0  \cf5 stampede_load_xyz_age_R_r\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.simulation.Snapshot():\cf1\highlight2 
+\par \cf0\highlight0 * reading:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/snapshot_times.txt\cf1\highlight2 
+\par 
+\par \cf0\highlight0   using snapshot index = 696, redshift = 0.000\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 # in gizmo_analysis.gizmo_io.Read():\cf1\highlight2 
+\par \cf0\highlight0 * reading header from:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/output/snapdir_696/snapshot_696.0.hdf5\cf1\highlight2 
+\par \cf0\highlight0   snapshot contains the following number of particles:\cf1\highlight2 
+\par \cf0\highlight0     dark      (id = 1): 70514272 particles\cf1\highlight2 
+\par \cf0\highlight0     dark2     (id = 2): 5513331 particles\cf1\highlight2 
+\par \cf0\highlight0     gas       (id = 0): 55617748 particles\cf1\highlight2 
+\par \cf0\highlight0     star      (id = 4): 15375761 particles\cf1\highlight2 
+\par \cf0\highlight0     blackhole (id = 5): 0 particles\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * reading species: ['star']\cf1\highlight2 
+\par \cf0\highlight0 * reading particles from:\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.0.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.1.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.2.hdf5\cf1\highlight2 
+\par \cf0\highlight0     snapshot_696.3.hdf5\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * reading cosmological parameters from:  scratch/projects/xsede/GalaxiesOnFIRE/mhdcv/m12i_res7100_mhdcv/1Myr/initial_condition/ic_agora_m12i.conf\cf1\highlight2 
+\par 
+\par \cf0\highlight0 * checking sanity of particle properties\cf1\highlight2 
+\par \cf0\highlight0 ! warning: star id.child [min, max] = [0.000, 4.294e9]\cf1\highlight2 
+\par 
+\par \cf0\highlight0   cannot read file containing hosts coordinates\cf1\highlight2 
+\par \cf0\highlight0   instead will assign hosts via iterative zoom on particle mass\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_center_positions():\cf1\highlight2 
+\par \cf0\highlight0 * assigning position for 1 center/host, via iterative zoom-in on star particle mass\cf1\highlight2 
+\par \cf0\highlight0   host1 position = (41844.819, 44106.892, 46284.661) [kpc comoving]\cf1\highlight2 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_center_velocities():\cf1\highlight2 
+\par \cf0\highlight0 * assigning velocity for 1 center/host, weighting star particles by mass\cf1\highlight2 
+\par \cf0\highlight0   host1 velocity = (-48.8, 80.2, 89.3) [km / s]\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 # in utilities.particle.get_principal_axes():\cf1\highlight2 
+\par \cf0\highlight0 * assigning rotation tensor for 1 host\cf1\highlight2 
+\par \cf0\highlight0   using star particles at distance < 10.0 kpc\cf1\highlight2 
+\par \cf0\highlight0   using distance < 7.9 kpc that encloses 90% of mass\cf1\highlight2 
+\par \cf0\highlight0   using youngest 25% of star particles\cf1\highlight2 
+\par \cf0\highlight0   host1: using star particles with age = [0.000, 3.182] Gyr\cf1\highlight2 
+\par \cf0\highlight0   host1: axis ratios: min/maj = 0.177, min/med = 0.185, med/maj = 0.957\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Calculated the cylindrical radius R in xy plane\cf1\highlight2 
+\par \cf0\highlight0 Calculated the spherical radius r in the xyz plane\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 2\cf3 ]: print\cf0 (R)\cf1\highlight2 
+\par \cf6\highlight0 ---------------------------------------------------------------------------\cf1\highlight2 
+\par \cf6\highlight0 NameError\cf0                                  Traceback (most recent call last)\cf1\highlight2 
+\par \cf7\highlight0 <ipython-input-2-f32858d06c53>\cf0  in \cf8 <module>\cf1\highlight2 
+\par \cf7\highlight0 ----> 1\cf6  \cf0 print\cf9 (\cf0 R\cf9 )\cf1\highlight2 
+\par 
+\par \cf6\highlight0 NameError\cf0 : name 'R' is not defined\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 3\cf3 ]: \cf0 R\cf1\highlight2 
+\par \cf6\highlight0 ---------------------------------------------------------------------------\cf1\highlight2 
+\par \cf6\highlight0 NameError\cf0                                  Traceback (most recent call last)\cf1\highlight2 
+\par \cf7\highlight0 <ipython-input-3-b1aa98ad3a02>\cf0  in \cf8 <module>\cf1\highlight2 
+\par \cf7\highlight0 ----> 1\cf6  \cf0 R\cf1\highlight2 
+\par 
+\par \cf6\highlight0 NameError\cf0 : name 'R' is not defined\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 4\cf3 ]: from\cf0  \cf5 stampede_load_xyz_age_R_r\cf0  \cf3 import\cf0  *\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 5\cf3 ]: print\cf0 (age)\cf1\highlight2 
+\par \cf0\highlight0 [1.07938339e+10 4.95514875e+09 3.97984121e+09 ... 6.14628749e+09\cf1\highlight2 
+\par \cf0\highlight0  1.08193790e+10 4.78003107e+09]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 6\cf3 ]: print\cf0 (R)\cf1\highlight2 
+\par \cf0\highlight0 [4819.02278418 5470.41623035    8.10929719 ... 1376.97348485 1376.78478739\cf1\highlight2 
+\par \cf0\highlight0  1376.58478469]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 7\cf3 ]: print\cf0 (age)\cf1\highlight2 
+\par \cf0\highlight0 [1.07938339e+10 4.95514875e+09 3.97984121e+09 ... 6.14628749e+09\cf1\highlight2 
+\par \cf0\highlight0  1.08193790e+10 4.78003107e+09]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 8\cf3 ]: print\cf0 (np.log10(age))\cf1\highlight2 
+\par \cf0\highlight0 [10.03317573  9.6950567   9.59986574 ...  9.78861287 10.03420234\cf1\highlight2 
+\par \cf0\highlight0   9.67943072]\cf1\highlight2 
+\par 
+\par \cf3\highlight0 In [\cf4 9\cf3 ]: \cf0 exit\cf1\highlight2 
+\par \cf0\highlight0 (base) c506-001[skx](204)$ exity\cf1\highlight2 
+\par \cf0\highlight0 -bash: exity: command not found\cf1\highlight2 
+\par \cf0\highlight0 (base) c506-001[skx](205)$ exit\cf1\highlight2 
+\par \cf0\highlight0 logout\cf1\highlight2 
+\par \cf0\highlight0 Connection to c506-001 closed.\cf1\highlight2 
+\par \cf0\highlight0 Cleaning up: submitted job (yes) removing job 6012460.\cf1\highlight2 
+\par \cf0\highlight0 (base) login4.stampede2(223)$ exit\cf1\highlight2 
+\par \cf0\highlight0 logout\cf1\highlight2 
+\par 
+\par \cf10\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf6\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf11 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf11 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf11 S\cf0  to save terminal output to file\cf1\highlight2 
+\par \pard\cf0\highlight0\f1 
+\par }
+ 
